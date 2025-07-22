@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apache Container - Ansible Deployment</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 600px;
+            margin: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .status {
+            background: rgba(76, 175, 80, 0.2);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #4CAF50;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+        .info-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .info-item h3 {
+            margin: 0 0 10px 0;
+            color: #FFD700;
+            font-size: 1.1em;
+        }
+        .info-item p {
+            margin: 0;
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        .tech-stack {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .tech-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Welcome to Apache Container</h1>
+        <div class="status">
+            <strong>✅ Successfully deployed with Ansible</strong>
+        </div>
+        
+        <p style="font-size: 1.2em; margin: 20px 0;">
+            This Apache HTTP Server has been automatically deployed using 
+            <strong>Ansible</strong> and <strong>Docker</strong> with custom network configuration.
+        </p>
+
+        <div class="info-grid">
+            <div class="info-item">
+                <h3>🌐 Network</h3>
+                <p>Custom Docker Bridge<br>
+                Subnet: 172.168.10.0/30<br>
+                Container IP: 172.168.10.2</p>
+            </div>
+            <div class="info-item">
+                <h3>🐳 Container</h3>
+                <p>Apache HTTPD Image<br>
+                Name: apache_web<br>
+                Port: 8080 → 80</p>
+            </div>
+            <div class="info-item">
+                <h3>⚙️ Automation</h3>
+                <p>Ansible Playbook<br>
+                Infrastructure as Code<br>
+                Restart Policy: Always</p>
+            </div>
+            <div class="info-item">
+                <h3>📊 Status</h3>
+                <p>Service: Running<br>
+                Health: OK<br>
+                Deployment: Complete</p>
+            </div>
+        </div>
+
+        <div class="tech-stack">
+            <span class="tech-badge">Ansible</span>
+            <span class="tech-badge">Docker</span>
+            <span class="tech-badge">Apache HTTP</span>
+            <span class="tech-badge">Linux</span>
+            <span class="tech-badge">DevOps</span>
+        </div>
+
+        <div class="footer">
+            <p>🔧 <strong>Deployment Information</strong></p>
+            <p>This page confirms that the Apache container is running correctly and serving content.</p>
+            <p><em>Automated Container Deployment Project</em></p>
+        </div>
+    </div>
+
+    <script>
+        // Add deployment timestamp
+        document.addEventListener('DOMContentLoaded', function() {
+            const footer = document.querySelector('.footer');
+            const timestamp = document.createElement('p');
+            timestamp.textContent = 'Page loaded: ' + new Date().toLocaleString();
+            timestamp.style.fontSize = '0.8em';
+            timestamp.style.marginTop = '10px';
+            footer.appendChild(timestamp);
+        });
+    </script>
+</body>
+</html>
